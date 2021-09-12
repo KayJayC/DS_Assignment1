@@ -1,0 +1,4 @@
+/Users/kayjay/Desktop/data_structures/assignment1/build/CMakeFiles/printout.dir
+/Users/kayjay/Desktop/data_structures/assignment1/build/CMakeFiles/rebuild_cache.dir
+/Users/kayjay/Desktop/data_structures/assignment1/build/CMakeFiles/edit_cache.dir
+/Users/kayjay/Desktop/data_structures/assignment1/build/CMakeFiles/assignment1.dir

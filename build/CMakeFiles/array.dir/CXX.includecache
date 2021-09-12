@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayjay/Desktop/data_structures/assignment1/array.cpp
+iostream
+-
+string
+-
+array.h
+/Users/kayjay/Desktop/data_structures/assignment1/array.h
+
+/Users/kayjay/Desktop/data_structures/assignment1/array.h
+

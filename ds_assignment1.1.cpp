@@ -24,9 +24,9 @@ using std::getline;
   Postcondition: Get the number of lines in the file and put the information from the 
                 file into an array that is parsed line by line.
 */
-/*CityInfo* openFile(CityInfo * cityInfo)
+CityInfo* openFile(CityInfo * cityInfo)
 {
-  int arraySize=60;
+  int arraySize=0;
   string line, tempLat,tempLong;
   ifstream demoText;
   string templine;
@@ -81,7 +81,7 @@ using std::getline;
 
 
     }
-  }
+  }/*
 
   for (int i=0; i < arraySize; i++)
   {
@@ -90,87 +90,20 @@ using std::getline;
     std::cout << cityInfo[i].longitude << "long ";
     std::cout << "\n\n\n";
   }
-  return arraySize;
+  return arraySize;*/ 
   demoText.close();
   return cityInfo;
 
-}*/
+}
 
 int main()
 {
-
-  cout << "Hello, time to enter some citys!!\n";
+  cout << "Hello, time to inter some city's!!\n";
   int arraySize=60;
-  string line, tempLat,tempLong;
-  ifstream demoText;
-  string templine;
-  size_t beginning, end, length;
-
-
-  demoText.open ("Assignment1.txt", std::ifstream::in);
-
-  if(!demoText)
-  {
-    std::cout << "error accessing demo test"<< std::endl;
-    system("pause");
-    exit(-1);
-  }
-
-
-  //put info from file into array
-  CityInfo cityInfo[arraySize];
-  int counter=0;
-
-  getline ( demoText, templine);
-  getline ( demoText, templine);
-
-  while (!demoText.eof())
-  {
-    getline (demoText,templine);
-    
-    if (!templine.empty())
-    {
-      //finds the city name
-      beginning = templine.find(':');
-      cityInfo[counter].cityName= templine.substr(0,beginning);
-      cout << cityInfo[counter].cityName << " name ";
-      
-      //finds the latitude
-      beginning = cityInfo[counter].cityName.length() + 2;
-      end= templine.find(',');
-      length= end-beginning; 
-      tempLat = templine.substr(beginning,length);
-      cout << tempLat << " left ";
-
-      //finds the longitude
-      beginning = templine.find(',');
-      tempLong= templine.substr(beginning + 2);
-      cout << tempLong << " right\n";
-
-      cityInfo[counter].latitude= stod (tempLat);
-
-      cityInfo[counter].longitude= stod (tempLong);
-
-    ++counter;
-    arraySize= counter;
-
-
-    }
-  }
-  cout << arraySize << "\n\n how big array";
-  //insertRecord (cityInfo,arraySize);
-  //arraySize++;
-
-
-  //display (cityInfo,arraySize);
-  //searchName (cityInfo, arraySize);
-  //searchCoordinates (cityInfo, arraySize);
-  //deleteName ( cityInfo, arraySize);
-  //deleteCoordinates (cityInfo, arraySize);
-
-  demoText.close();
+  CityInfo cityInformation [arraySize]; 
+  
+  cityInformation= openFile(cityInformation);
+  
   return 0;
-}
-
 }
 
